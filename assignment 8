@@ -1,0 +1,72 @@
+Q1. The Exception class is used as the base class for all the exceptions in Python. When creating a custom exception, we inherit from the Exception class to create our own exception. This allows us to define our own error messages and error handling¹².
+
+Q2. Here is an example Python program that prints the Python Exception Hierarchy:
+
+```python
+import inspect
+
+def print_exception_hierarchy():
+    for name, obj in inspect.getmembers(__builtins__):
+        if inspect.isclass(obj):
+            if issubclass(obj, BaseException):
+                print(name)
+```
+
+Q3. The ArithmeticError class is the base class for all errors associated with arithmetic operations. Some of the errors defined in this class are ZeroDivisionError, OverflowError and FloatingPointError⁹. 
+
+ZeroDivisionError occurs when we try to divide a number by zero. For example:
+
+```python
+try:
+    x = 1 / 0
+except ZeroDivisionError as e:
+    print("Caught an exception:", e)
+```
+
+OverflowError occurs when the result of an arithmetic operation is too large to be represented by a finite number in Python. For example:
+
+```python
+import math
+
+try:
+    x = math.exp(1000)
+except OverflowError as e:
+    print("Caught an exception:", e)
+```
+
+Q4. The LookupError class is used as the base class for all exceptions that are raised when an index or a key is not found for a sequence or dictionary respectively. Two examples of such exceptions are KeyError and IndexError.
+
+KeyError occurs when we try to access a dictionary key that does not exist. For example:
+
+```python
+d = {"a": 1, "b": 2}
+
+try:
+    x = d["c"]
+except KeyError as e:
+    print("Caught an exception:", e)
+```
+
+IndexError occurs when we try to access an index that is out of range for a sequence. For example:
+
+```python
+l = [1, 2, 3]
+
+try:
+    x = l[3]
+except IndexError as e:
+    print("Caught an exception:", e)
+```
+
+Q5. ImportError occurs when there is an error while importing a module in Python. ModuleNotFoundError is a subclass of ImportError that is raised when a module could not be found⁵.
+
+Q6. Some best practices for exception handling in Python are:
+
+- Use exceptions instead of returning error codes.
+- Handle exceptions at the appropriate level.
+- Be specific about which exceptions you catch.
+- Use finally blocks to release resources.
+- Use context managers to simplify resource management.
+- Log exceptions and their stack traces.
+- Define your own exception hierarchy¹⁴.
+
