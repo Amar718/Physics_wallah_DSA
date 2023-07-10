@@ -1,4 +1,3 @@
-Sure, I can help you with that. Here are the answers to your questions:
 
 Q1. How do you comment code in Python? What are the different types of comments?
 A1. In Python, you can use the hash symbol (#) to add a single-line comment. You can also use triple quotes (''' or """) to add multi-line comments. There are two types of comments in Python: single-line comments and multi-line comments.
