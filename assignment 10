@@ -1,0 +1,45 @@
+Multithreading is a technique that allows a program to perform multiple tasks concurrently. In Python, multithreading can be achieved using the `threading` module. The following functions are available in the `threading` module:
+
+- `active_count()`: This function returns the number of currently active Thread objects. This value is equal to the length of the list that the function `enumerate()` returns.
+- `current_thread()`: This function returns a list of all Thread objects in the caller's thread control.
+- `enumerate()`: This function returns a list of all Thread objects that are currently active.
+- `run()`: This method is called when a thread starts executing.
+- `start()`: This method starts a thread by calling the run method.
+- `join()`: This method waits for the thread to complete its execution.
+- `is_alive()`: This method returns True if the thread is alive.
+
+Here's an example Python program that creates two threads. Thread one prints the list of squares and thread two prints the list of cubes:
+
+```python
+import threading
+
+def print_squares():
+    for i in range(10):
+        print(i*i)
+
+def print_cubes():
+    for i in range(10):
+        print(i*i*i)
+
+t1 = threading.Thread(target=print_squares)
+t2 = threading.Thread(target=print_cubes)
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+```
+
+Advantages of multithreading include:
+- Increased responsiveness and interactivity
+- Improved performance on multi-core processors
+- Simplified program structure
+
+Disadvantages of multithreading include:
+- Increased complexity
+- Difficulty in debugging
+- Increased memory usage
+
+Deadlocks occur when two or more threads are blocked forever, waiting for each other to release resources. Race conditions occur when two or more threads access shared data and try to modify it at the same time. These can be avoided by using locks and semaphores.
+
