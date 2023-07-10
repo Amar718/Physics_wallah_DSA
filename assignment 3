@@ -1,0 +1,53 @@
+Sure, I can help you with that. 
+
+Q1. The keyword used to create a function in Python is `def`. Here's an example of a function that returns a list of odd numbers in the range of 1 to 25:
+```python
+def odd_numbers():
+    return [i for i in range(1, 26) if i % 2 != 0]
+```
+
+Q2. `*args` and `**kwargs` are used in Python functions to pass a variable number of arguments to a function. `*args` is used to pass a non-keyworded, variable-length argument list while `**kwargs` allows you to pass keyworded variable-length argument lists. Here are examples of functions that demonstrate their use:
+```python
+def my_sum(*args):
+    return sum(args)
+
+def my_dict(**kwargs):
+    return kwargs
+```
+
+Q3. An iterator is an object that can be iterated (looped) upon. In Python, an iterator is an object that implements the iterator protocol (which consists of the methods `__iter__()` and `__next__()`). The `__iter__()` method initializes the iterator object and returns the object itself while the `__next__()` method returns the next value from the iterator. Here's an example of how to initialize an iterator object and iterate over it:
+```python
+my_list = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+my_iterator = iter(my_list)
+for i in range(5):
+    print(next(my_iterator))
+```
+
+Q4. A generator function is a function that returns an iterator object (a generator) which can be iterated over (one value at a time). The `yield` keyword is used in generator functions to return values one at a time. Here's an example of a generator function:
+```python
+def prime_numbers():
+    n = 2
+    while True:
+        for i in range(2, n):
+            if n % i == 0:
+                break
+        else:
+            yield n
+        n += 1
+```
+
+Q5. Here's an example of a generator function for prime numbers less than 1000 and how to use the `next()` method to print the first 20 prime numbers:
+```python
+def prime_numbers():
+    n = 2
+    while True:
+        for i in range(2, n):
+            if n % i == 0:
+                break
+        else:
+            yield n
+        n += 1
+
+prime_gen = prime_numbers()
+for i in range(20):
+    print(next(prime_gen))
