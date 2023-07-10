@@ -1,0 +1,45 @@
+
+
+Q1. A database is an organized collection of data stored and accessed electronically. SQL (Structured Query Language) databases are table-based, while NoSQL databases can be document-oriented, key-value pairs, or graph structures. SQL has a fixed-defined schema, while NoSQL databases are more flexible ¹².
+
+Q2. DDL (Data Definition Language) is used to define the database schema. CREATE is used to create a new table or database, DROP is used to delete an entire table or database, ALTER is used to modify the structure of an existing table or database, and TRUNCATE is used to delete all data from a table ¹.
+
+Q3. DML (Data Manipulation Language) is used to manipulate data within the database. INSERT is used to add new data into a table, UPDATE is used to modify existing data within a table, and DELETE is used to remove data from a table ¹.
+
+Q4. DQL (Data Query Language) is used to retrieve data from the database. SELECT is used to retrieve data from one or more tables ¹.
+
+Q5. A Primary Key is a column or set of columns that uniquely identifies each row in a table. A Foreign Key is a column or set of columns that refers to the Primary Key of another table ⁵⁶⁷.
+
+Q6. Here's an example Python code that connects MySQL with Python using the mysql-connector-python module:
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM customers")
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+  print(x)
+```
+
+The `cursor()` method creates a cursor object that can execute queries on the database. The `execute()` method executes the query passed as an argument and returns the result set [^10^] ¹¹.
+
+Q7. The order of execution of SQL clauses in an SQL query is as follows:
+
+1. SELECT
+2. FROM
+3. WHERE
+4. GROUP BY
+5. HAVING
+6. ORDER BY
+
