@@ -1,0 +1,114 @@
+
+
+Q1. **Class** is a blueprint for creating objects. It defines a set of attributes that will characterize any object that is instantiated from this class. An **object** is an instance of a class. When you create an object, you are creating an instance of a class, thus **instantiating** the class. For example, if you have a class called "Person", you can create an object of that class called "John" ¹.
+
+Q2. The four pillars of OOPs are **Encapsulation**, **Abstraction**, **Inheritance**, and **Polymorphism** ⁵.
+
+Q3. The `__init__()` function is used to initialize the attributes of an object. It is called when an object is created from a class and allows the class to initialize the attributes of a class ⁴. Here's an example:
+
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+person1 = Person("John", 36)
+print(person1.name)
+print(person1.age)
+```
+
+Output:
+```
+John
+36
+```
+
+Q4. In OOPs, `self` is used to refer to the instance of the class. It is used to access the attributes and methods of the class ⁵.
+
+Q5. **Inheritance** is one of the four pillars of OOPs and it allows one class to inherit properties and methods from another class. There are four types of inheritance in Python: **Single Inheritance**, **Multiple Inheritance**, **Multi-level Inheritance**, and **Hierarchical Inheritance** ³. Here's an example for each type:
+
+```python
+# Single Inheritance
+class Animal:
+    def __init__(self):
+        print("Animal created")
+
+class Dog(Animal):
+    def __init__(self):
+        Animal.__init__(self)
+        print("Dog created")
+
+dog1 = Dog()
+
+# Multiple Inheritance
+class A:
+    def __init__(self):
+        print("A created")
+
+class B:
+    def __init__(self):
+        print("B created")
+
+class C(A, B):
+    def __init__(self):
+        A.__init__(self)
+        B.__init__(self)
+        print("C created")
+
+c1 = C()
+
+# Multi-level Inheritance
+class Animal:
+    def __init__(self):
+        print("Animal created")
+
+class Mammal(Animal):
+    def __init__(self):
+        Animal.__init__(self)
+        print("Mammal created")
+
+class Dog(Mammal):
+    def __init__(self):
+        Mammal.__init__(self)
+        print("Dog created")
+
+dog2 = Dog()
+
+# Hierarchical Inheritance
+class Animal:
+    def __init__(self):
+        print("Animal created")
+
+class Cat(Animal):
+    def __init__(self):
+        Animal.__init__(self)
+        print("Cat created")
+
+class Lion(Animal):
+    def __init__(self):
+        Animal.__init__(self)
+        print("Lion created")
+
+cat1 = Cat()
+lion1 = Lion()
+```
+
+Output:
+```
+Animal created
+Dog created
+
+A created
+B created
+C created
+
+Animal created
+Mammal created
+Dog created
+
+Animal created
+Cat created
+Animal created
+Lion created
+```
+
