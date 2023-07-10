@@ -1,0 +1,25 @@
+API stands for Application Programming Interface. It is a set of protocols, routines, and tools for building software applications. APIs specify how software components should interact and APIs are used when programming graphical user interface (GUI) components. For example, when you use an application on your mobile phone that sends data to the internet, such as checking the weather or posting a tweet, it connects to an API on the internet that sends it the information it needs to complete the task³.
+
+APIs are used in real life in many ways. For example, Google Maps API allows developers to embed Google Maps on webpages by using a JavaScript or Flash interface³.
+
+Advantages of using API include:
+- API supports traditional CRUD (Create Read Update Delete) actions as it works with HTTP verbs GET, PUT, POST, and DELETE.
+- API helps you to expose service data to the browser.
+- It is based on HTTP, which is easy to define, expose in REST-full way¹.
+
+Disadvantages of using API include:
+- Security issues.
+- Complexity.
+- Lack of standardization¹.
+
+A Web API is an API accessed using the HTTP protocol. A Web API is a development in web services where emphasis has been moving to simpler representational state transfer (REST) based communications³. The main difference between an API and a Web API is that while APIs are generally designed for use by other programs, Web APIs are designed for use by humans as well as programs⁵.
+
+REST (Representational State Transfer) is an architectural style for developing web services. It is a lightweight alternative to SOAP (Simple Object Access Protocol). RESTful web services are stateless and can be cached. SOAP (Simple Object Access Protocol) is a protocol specification for exchanging structured information in the implementation of web services in computer networks⁴. The main shortcomings of SOAP include:
+- SOAP requires more bandwidth than REST.
+- SOAP requires more processing power than REST.
+- SOAP has built-in error handling⁴.
+
+The main differences between REST and SOAP are:
+- REST uses HTTP protocol while SOAP uses XML protocol.
+- REST is lightweight while SOAP is heavyweight.
+- RESTful web services are stateless while SOAP web services are stateful².
