@@ -1,0 +1,53 @@
+Python's **multiprocessing** module is used to create and manage new child processes in Python⁶. It allows you to execute multiple processes concurrently¹¹. Multiprocessing is useful when you want to run multiple processes in parallel on different CPU cores¹³. It is also useful when you want to run CPU-bound tasks that require a lot of processing power¹³. 
+
+The main differences between multiprocessing and multithreading are that multiprocessing uses separate memory spaces for each process while multithreading uses the same memory space for all threads¹². Multiprocessing is better suited for CPU-bound tasks while multithreading is better suited for I/O-bound tasks¹⁵.
+
+Here's an example of how to create a process using the **multiprocessing** module in Python:
+```python
+import multiprocessing
+
+def worker():
+    """worker function"""
+    print('Worker')
+    return
+
+if __name__ == '__main__':
+    jobs = []
+    for i in range(5):
+        p = multiprocessing.Process(target=worker)
+        jobs.append(p)
+        p.start()
+```
+
+A **multiprocessing pool** is a collection of worker processes that can be used to execute tasks asynchronously¹. It is used to distribute work across available CPUs and cores³. A pool can be created using the **Pool** class from the **multiprocessing** module¹.
+
+Here's an example of how to create a pool of worker processes using the **multiprocessing** module in Python:
+```python
+import multiprocessing
+
+def worker(num):
+    """thread worker function"""
+    print('Worker:', num)
+    return
+
+if __name__ == '__main__':
+    with multiprocessing.Pool(processes=4) as pool:
+        pool.map(worker, [1, 2, 3, 4])
+```
+
+Here's an example of how to create 4 processes, each process should print a different number using the **multiprocessing** module in Python:
+```python
+import multiprocessing
+
+def worker(num):
+    """thread worker function"""
+    print(num)
+    return
+
+if __name__ == '__main__':
+    jobs = []
+    for i in range(4):
+        p = multiprocessing.Process(target=worker, args=(i,))
+        jobs.append(p)
+        p.start()
+```
