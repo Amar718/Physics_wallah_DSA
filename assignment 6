@@ -1,0 +1,68 @@
+
+
+Q1. Here is an example of a Vehicle class with instance variables name_of_vehicle, max_speed and average_of_vehicle:
+```python
+class Vehicle:
+    def __init__(self, name_of_vehicle, max_speed, average_of_vehicle):
+        self.name_of_vehicle = name_of_vehicle
+        self.max_speed = max_speed
+        self.average_of_vehicle = average_of_vehicle
+```
+
+Q2. Here is an example of a Car class that inherits from the Vehicle class and has a method named seating_capacity:
+```python
+class Car(Vehicle):
+    def seating_capacity(self, capacity):
+        return f"{self.name_of_vehicle} has a seating capacity of {capacity} passengers."
+```
+
+Q3. Multiple inheritance is when a class inherits from more than one parent class. Here is an example of multiple inheritance in Python:
+```python
+class Parent1:
+    def method1(self):
+        print("This is method 1 from Parent 1.")
+
+class Parent2:
+    def method2(self):
+        print("This is method 2 from Parent 2.")
+
+class Child(Parent1, Parent2):
+    def method3(self):
+        print("This is method 3 from Child.")
+
+c = Child()
+c.method1()
+c.method2()
+c.method3()
+```
+
+Q4. Getters and setters are methods used to access and modify the values of instance variables in a class. Here is an example of a class with getter and setter methods:
+```python
+class MyClass:
+    def __init__(self):
+        self._my_variable = None
+
+    def get_my_variable(self):
+        return self._my_variable
+
+    def set_my_variable(self, value):
+        self._my_variable = value
+
+obj = MyClass()
+obj.set_my_variable(10)
+print(obj.get_my_variable())
+```
+
+Q5. Method overriding is when a subclass provides its own implementation of a method that is already defined in its parent class. Here is an example of method overriding in Python:
+```python
+class Parent:
+    def my_method(self):
+        print("This is the parent's implementation of my_method.")
+
+class Child(Parent):
+    def my_method(self):
+        print("This is the child's implementation of my_method.")
+
+c = Child()
+c.my_method()
+```
