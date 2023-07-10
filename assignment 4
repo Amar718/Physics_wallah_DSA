@@ -1,0 +1,44 @@
+Sure! Here are the solutions to your questions:
+
+Q1. Here's a Python program that sorts the given list of tuples based on integer value using a lambda function:
+```python
+lst = [('Sachin Tendulkar', 34357), ('Ricky Ponting', 27483), ('Jack Kallis', 25534), ('Virat Kohli', 24936)]
+lst.sort(key = lambda x: x[1])
+print(lst)
+```
+
+Q2. Here's a Python program that finds the squares of all the numbers in the given list of integers using lambda and map functions:
+```python
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = list(map(lambda x: x**2, lst))
+print(squares)
+```
+
+Q3. Here's a Python program that converts the given list of integers into a tuple of strings using map and lambda functions:
+```python
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+tuple_of_strings = tuple(map(lambda x: str(x), lst))
+print(tuple_of_strings)
+```
+
+Q4. Here's a Python program using reduce function to compute the product of a list containing numbers from 1 to 25:
+```python
+from functools import reduce
+lst = [i for i in range(1,26)]
+product = reduce(lambda x,y: x*y,lst)
+print(product)
+```
+
+Q5. Here's a Python program to filter the numbers in a given list that are divisible by 2 and 3 using the filter function:
+```python
+lst = [2,3,6,9,27,60,90,120,55,46]
+filtered_lst = list(filter(lambda x: (x%2==0) and (x%3==0), lst))
+print(filtered_lst)
+```
+
+Q6. Here's a Python program to find palindromes in the given list of strings using lambda and filter function:
+```python
+lst = ['python', 'php', 'aba', 'radar', 'level']
+palindromes = list(filter(lambda x: (x == "".join(reversed(x))), lst))
+print(palindromes)
+```
