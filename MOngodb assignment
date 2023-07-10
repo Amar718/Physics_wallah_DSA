@@ -1,0 +1,7 @@
+MongoDB is a document-oriented NoSQL database that stores data in JSON-like documents with dynamic schemas. It is a non-relational database that supports JSON querying and handles large unstructured datasets. In contrast, SQL databases store data in traditional row-column structures and are more suited for smaller and predefined datasets1. MongoDB is preferred over SQL databases in scenarios where there is a need for high scalability, high availability, and high performance1.
+
+Q2. The features of MongoDB include:
+
+Document-oriented
+High performance
+High availability
