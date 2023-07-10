@@ -1,0 +1,78 @@
+
+
+Q1. An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. In Python, exceptions are objects of classes, which are the subclasses of the BaseException class. All exception classes are the subclasses of the BaseException class. However, almost all built-in exception classes inherit from the Exception class, which is the subclass of the BaseException class ¹. 
+
+Q2. When an exception is not handled, it will cause the program to terminate abruptly with an error message. For example, if you try to divide a number by zero, Python will raise a ZeroDivisionError exception ². 
+
+Q3. In Python, we use try-except statements to handle exceptions. The try block contains code that might raise an exception while the except block contains code that handles the exception. Here's an example:
+
+```python
+try:
+    x = int(input("Please enter a number: "))
+    y = int(input("Please enter another number: "))
+    print(x / y)
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+```
+
+In this example, if you try to divide a number by zero, Python will raise a ZeroDivisionError exception and the except block will handle it by printing "You cannot divide by zero!" ⁵.
+
+Q4. Here's an example:
+
+```python
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+else:
+    print("The result is:", x)
+finally:
+    print("This will always execute.")
+```
+
+In this example, we try to divide 1 by 0 which raises a ZeroDivisionError exception. The except block handles this exception by printing "You cannot divide by zero!". Since there is no error in the try block, the else block executes and prints "The result is: 1". Finally, the finally block executes and prints "This will always execute." ⁴.
+
+Q5. Custom exceptions are user-defined exceptions that can be raised when a certain condition occurs. We need custom exceptions when we want to raise an exception that is not already defined in Python or when we want to create our own hierarchy of exceptions. Here's an example:
+
+```python
+class MyException(Exception):
+    pass
+
+def my_function():
+    raise MyException("This is my custom exception.")
+
+try:
+    my_function()
+except MyException as e:
+    print(e)
+```
+
+In this example, we define a custom exception called MyException which inherits from the built-in Exception class. We then define a function called my_function() which raises this custom exception with a message "This is my custom exception." We then call this function inside a try-except block and handle the MyException exception by printing its message ⁴.
+
+Q6. Here's an example:
+
+```python
+class MyException(Exception):
+    pass
+
+class MyClass:
+    def __init__(self):
+        self._x = None
+
+    def get_x(self):
+        return self._x
+
+    def set_x(self, value):
+        if value < 0:
+            raise MyException("Value cannot be negative.")
+        self._x = value
+
+try:
+    obj = MyClass()
+    obj.set_x(-1)
+except MyException as e:
+    print(e)
+```
+
+In this example, we define a custom exception called MyException which inherits from the built-in Exception class. We then define a class called MyClass which has two methods get_x() and set_x(). The set_x() method raises the MyException exception if the value passed to it is negative. We then create an object of MyClass and call its set_x() method with a negative value inside a try-except block and handle the MyException exception by printing its message ⁸.
+
