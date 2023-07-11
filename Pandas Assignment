@@ -1,0 +1,6 @@
+To print the data present in the second row of the dataframe, df, you can use the following code:
+```
+print(df.loc[1])
+```
+Here, `loc` is used to select rows and columns by label or a boolean array. The label 1 is used to select the second row of the dataframe. ¹³⁵
+
