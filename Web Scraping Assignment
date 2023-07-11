@@ -1,0 +1,11 @@
+Web scraping is the process of extracting data from websites. It is used to extract data from websites that do not have an API or when the API does not provide all the data required. Web scraping can be used in various areas such as price comparison, data analysis, research, and more¹. 
+
+There are different methods used for web scraping such as manual extraction technique and automated extraction technique³. Some of the most popular web scrapers are Beautiful Soup, Scrapy, Selenium, and Octoparse².
+
+Beautiful Soup is a Python library used for web scraping purposes. It creates a parse tree from page source code that can be used to extract data in a hierarchical and more readable manner. Beautiful Soup helps you pull particular content from a webpage, remove the HTML markup, and save the information. It is a tool for web scraping that helps you clean up and parse the documents you have pulled down from the web⁶⁷⁹.
+
+Flask is a lightweight framework to build websites. Flask is used in web scraping projects to parse collected data and display it as HTML in a new HTML file. The requests module allows us to send http requests to the website we want to scrape¹²¹³.
+
+The AWS services used in this project are Amazon EC2 (Elastic Compute Cloud), Amazon S3 (Simple Storage Service), Amazon RDS (Relational Database Service), Amazon CloudWatch, Amazon SES (Simple Email Service), and Amazon Route 53⁴. 
+
+Amazon EC2 provides scalable computing capacity in the cloud. Amazon S3 provides secure object storage in the cloud. Amazon RDS provides managed relational databases in the cloud. Amazon CloudWatch provides monitoring for AWS resources and applications. Amazon SES provides email sending and receiving capabilities. Amazon Route 53 provides scalable domain name system (DNS) web service⁴.
