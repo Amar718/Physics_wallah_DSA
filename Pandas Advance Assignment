@@ -1,0 +1,100 @@
+
+Q1. List any five functions of the pandas library with execution.
+- read_csv(): This is one of the most crucial pandas methods in Python. read_csv() function helps read a comma-separated values (csv) file into a Pandas DataFrame. For example:
+```python
+import pandas as pd
+df = pd.read_csv('file.csv')
+```
+- head(): head(n) is used to return the first n rows of a dataset. For example:
+```python
+import pandas as pd
+df = pd.read_csv('file.csv')
+df.head(5)
+```
+- describe(): This method is used to view some basic statistical details like percentile, mean, std etc. of a data frame or a series of numeric values. For example:
+```python
+import pandas as pd
+df = pd.read_csv('file.csv')
+df.describe()
+```
+- memory_usage(): This method returns the memory usage of each column in bytes. For example:
+```python
+import pandas as pd
+df = pd.read_csv('file.csv')
+df.memory_usage()
+```
+- astype(): This method is used to cast a pandas object to a specified dtype. For example:
+```python
+import pandas as pd
+df = pd.read_csv('file.csv')
+df['column_name'] = df['column_name'].astype(float)
+```
+
+Q2. Given a Pandas DataFrame df with columns 'A', 'B', and 'C', here's how you can re-index the DataFrame with a new index that starts from 1 and increments by 2 for each row:
+```python
+import pandas as pd
+df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]})
+df.index = range(1, len(df) * 2, 2)
+print(df)
+```
+
+Q3. Here's how you can iterate over the DataFrame and calculate the sum of the first three values in the 'Values' column:
+```python
+import pandas as pd
+
+def sum_first_three(df):
+    total_sum = 0
+    for i in range(3):
+        total_sum += df['Values'][i]
+    print(total_sum)
+
+# Example usage:
+df = pd.DataFrame({'Values': [10, 20, 30, 40, 50]})
+sum_first_three(df)
+```
+
+Q4. Given a Pandas DataFrame df with a column 'Text', here's how you can create a new column 'Word_Count' that contains the number of words in each row of the 'Text' column:
+```python
+import pandas as pd
+
+def word_count(df):
+    df['Word_Count'] = df['Text'].apply(lambda x: len(str(x).split(" ")))
+    return df
+
+# Example usage:
+df = pd.DataFrame({'Text': ['This is an example sentence.', 'This is another example sentence.']})
+print(word_count(df))
+```
+
+Q5. DataFrame.size() returns the number of elements in the DataFrame (rows * columns), while DataFrame.shape() returns a tuple representing the dimensions of the DataFrame (rows, columns).
+
+Q6. We use read_excel() function of pandas to read an excel file. For example:
+```python
+import pandas as pd
+
+df = pd.read_excel('file.xlsx')
+```
+
+Q7. Here's how you can create a new column 'Username' in df that contains only the username part of each email address:
+```python
+import pandas as pd
+
+def extract_username(df):
+    df['Username'] = df['Email'].apply(lambda x: x.split('@')[0])
+    return df
+
+# Example usage:
+df = pd.DataFrame({'Email': ['john.doe@example.com', 'jane.doe@example.com']})
+print(extract_username(df))
+```
+
+Q8. Here's how you can select all rows where the value in column 'A' is greater than 5 and the value in column 'B' is less than 10:
+```python
+import pandas as pd
+
+def select_rows(df):
+    return df[(df['A'] > 5) & (df['B'] < 10)]
+
+# Example usage:
+df = pd.DataFrame({'A': [3, 8, 6, 2, 9], 'B': [5, 2, 9, 3, 1], 'C
+
