@@ -1,0 +1,48 @@
+
+Q1. Yes, there is a difference in the data type of variables list_ and array_list. The data type of variable list_ is 'list' whereas the data type of variable array_list is 'numpy.ndarray'. Here's the code to print the data types of both the variables:
+```python
+print(type(list_))
+print(type(array_list))
+```
+
+Q2. Here's the code to print the data type of each and every element of both the variables list_ and array_list:
+```python
+for i in list_:
+    print(type(i))
+    
+for i in array_list:
+    print(type(i))
+```
+
+Q3. Yes, there will be a difference in the data type of the elements present in both the variables, list_ and array_list. The data type of elements present in variable list_ is 'str' whereas the data type of elements present in variable array_list will be 'int64'. Here's the code to print the data types of each and every element present in both the variables, list_ and array_list:
+```python
+for i in list_:
+    print(type(i))
+    
+for i in array_list:
+    print(type(i))
+```
+
+Q4. Here's the code to find the following characteristics of variable, num_array:
+(i) shape
+(ii) size
+```python
+print(num_array.shape)
+print(num_array.size)
+```
+
+Q5. Here's the code to create numpy array of 3*3 matrix containing zeros only, using a numpy array creation function:
+```python
+import numpy as np
+
+zeros_array = np.zeros((3,3))
+print(zeros_array)
+```
+
+Q6. Here's how you can create an identity matrix of shape (5,5) using numpy functions:
+```python
+import numpy as np
+
+identity_matrix = np.identity(5)
+print(identity_matrix)
+```
