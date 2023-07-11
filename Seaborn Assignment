@@ -1,0 +1,50 @@
+
+
+1. Five plots that we can plot using the Seaborn library are:
+    - Line Plot: It is used to visualize the relationship between two variables on different axes.
+    - Scatter Plot: It is used to visualize the relationship between two variables on the same axes.
+    - Bar Plot: It is used to visualize the distribution of categorical data.
+    - Histogram: It is used to visualize the distribution of continuous data.
+    - Heatmap: It is used to visualize the correlation between variables.
+
+2. Here's how you can load the "fmri" dataset using the load_dataset function of seaborn and plot a line plot using x = "timepoint" and y = "signal" for different events and regions:
+```python
+import seaborn as sns
+
+fmri = sns.load_dataset("fmri")
+sns.lineplot(x="timepoint", y="signal", hue="event", style="region", data=fmri)
+```
+
+3. Here's how you can load the "titanic" dataset using the load_dataset function of seaborn and plot two box plots using x = 'pclass', y = 'age' and y = 'fare':
+```python
+import seaborn as sns
+
+titanic = sns.load_dataset("titanic")
+sns.boxplot(x="pclass", y="age", data=titanic)
+sns.boxplot(x="pclass", y="fare", data=titanic)
+```
+
+4. Here's how you can use the "diamonds" dataset from seaborn to plot a histogram for the 'price' column. Use the hue parameter for the 'cut' column of the diamonds dataset:
+```python
+import seaborn as sns
+
+diamonds = sns.load_dataset("diamonds")
+sns.histplot(data=diamonds, x="price", hue="cut")
+```
+
+5. Here's how you can use the "iris" dataset from seaborn to plot a pair plot. Use the hue parameter for the "species" column of the iris dataset:
+```python
+import seaborn as sns
+
+iris = sns.load_dataset("iris")
+sns.pairplot(data=iris, hue="species")
+```
+
+6. Here's how you can use the "flights" dataset from seaborn to plot a heatmap:
+```python
+import seaborn as sns
+
+flights = sns.load_dataset("flights")
+flights = flights.pivot("month", "year", "passengers")
+sns.heatmap(flights, annot=True, fmt="d")
+```
