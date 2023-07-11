@@ -1,0 +1,94 @@
+Q1: Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides an object-oriented API for embedding plots into applications using general-purpose GUI toolkits like Tkinter, wxPython, Qt, or GTK. It is used to create a wide range of plots such as line plots, scatter plots, bar plots, box plots, etc. ¹²
+
+Q2: A scatter plot is a graph used to plot data points on horizontal and vertical axis in the attempt to show how much one variable is affected by another. The following code can be used to generate data for x and y and plot a scatter plot with title, xlabel and ylabel:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(3)
+x = 3 + np.random.normal(0, 2, 50)
+y = 3 + np.random.normal(0, 2, len(x))
+
+plt.scatter(x,y)
+plt.title('Scatter Plot')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.show()
+```
+
+Q3: The subplot() function is used to create multiple plots in the same figure. It takes three arguments: nrows, ncols and index. nrows specifies the number of rows of subplots in the figure; ncols specifies the number of columns of subplots in the figure; index specifies which subplot to create. Here are four line plots using the subplot() function:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x1 = np.array([0, 1, 2, 3, 4, 5])
+y1 = np.array([0, 100, 200, 300, 400, 500])
+
+x2 = np.array([0, 1, 2, 3, 4, 5])
+y2 = np.array([50, 20, 40, 20, 60, 70])
+
+x3 = np.array([0, 1, 2, 3, 4, 5])
+y3 = np.array([10, 20, 30, 40, 50, 60])
+
+x4 = np.array([0, 1, 2, 3, 4, 5])
+y4 = np.array([200, 350, 250, 550 ,450 ,150])
+
+plt.subplot(2 ,2 ,1)
+plt.plot(x1,y1)
+plt.title('Line Plot-1')
+
+plt.subplot(2 ,2 ,2)
+plt.plot(x2,y2)
+plt.title('Line Plot-2')
+
+plt.subplot(2 ,2 ,3)
+plt.plot(x3,y3)
+plt.title('Line Plot-3')
+
+plt.subplot(2 ,2 ,4)
+plt.plot(x4,y4)
+plt.title('Line Plot-4')
+
+plt.show()
+```
+
+Q4: A bar plot is a graph that represents the categorical data with rectangular bars with heights or lengths proportional to the values that they represent. It is used to compare different categories of data. Here is how you can plot a bar plot and a horizontal bar plot using the following data:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+company = np.array(["Apple", "Microsoft", "Google", "AMD"])
+profit = np.array([3000 ,8000 ,1000 ,10000])
+
+# Vertical Bar Plot
+plt.bar(company ,profit)
+plt.title('Bar Plot')
+plt.xlabel('Company')
+plt.ylabel('Profit')
+plt.show()
+
+# Horizontal Bar Plot
+plt.barh(company ,profit)
+plt.title('Horizontal Bar Plot')
+plt.xlabel('Profit')
+plt.ylabel('Company')
+plt.show()
+```
+
+Q5: A box plot is a graph that represents the distribution of data based on five number summary ("minimum", first quartile (Q1), median (Q2), third quartile (Q3), and "maximum"). It is used to detect outliers and compare distributions. Here is how you can plot a box plot using the following data:
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+box1 = np.random.normal(100 ,10 ,200)
+box2 = np.random.normal(90 ,20 ,200)
+
+data = [box1 ,box2]
+
+fig = plt.figure(figsize =(10 ,7))
+
+ax = fig.add_subplot(111)
+
+bp = ax.boxplot(data)
+
+ax.set_xtick
