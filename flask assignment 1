@@ -1,0 +1,77 @@
+
+Advantages of Flask Framework:
+- Flask is lightweight and easy to learn.
+- Flask is highly customizable.
+- Flask is integrated with Jinja2 templating engine which makes it easy to write HTML templates.
+- Flask has a built-in development server and debugger.
+- Flask supports unit testing.
+- Flask is compatible with Google App Engine².
+
+Disadvantages of Flask Framework:
+- Flask is not suitable for large applications because it lacks the functionality of large frameworks like Django.
+- Flask does not have built-in support for database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions²⁴.
+
+Here's a simple code snippet to display 'Hello World!!' using Flask Framework:
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello World!!'
+
+if __name__ == '__main__':
+    app.run()
+```
+
+App routing in Flask refers to the process of directing a user's request to the appropriate handler function. In other words, it maps URLs to handler functions. We use app routes in Flask to define the URL patterns for our web application¹.
+
+Here's a code snippet to create a '/welcome' route to display the welcome message “Welcome to ABC Corporation” and a “/” route to show the following details:
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/welcome')
+def welcome():
+    return 'Welcome to ABC Corporation'
+
+@app.route('/')
+def company_details():
+    return 'Company Name: ABC Corporation<br>Location: India<br>Contact Detail: 999-999-9999'
+
+if __name__ == '__main__':
+    app.run()
+```
+
+The function used in Flask for URL Building is `url_for()`. It generates URLs using the endpoint name and arguments passed to it. Here's an example code snippet that demonstrates the working of the `url_for()` function:
+```python
+from flask import Flask, url_for
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Index Page'
+
+@app.route('/login')
+def login():
+    return 'Login Page'
+
+@app.route('/user/<username>')
+def profile(username):
+    return f'{username}\'s Profile'
+
+with app.test_request_context():
+    print(url_for('index'))
+    print(url_for('login'))
+    print(url_for('profile', username='John Doe'))
+```
+Output:
+```
+/
+/login
+/user/John%20Doe
+```
+
