@@ -1,0 +1,30 @@
+
+
+Q1. The three measures of central tendency are mean, median and mode¹³⁵.
+
+Q2. Mean is the average value of a dataset. Median is the middle value of a dataset when it is ordered from smallest to largest. Mode is the most frequently occurring value in a dataset¹³⁵. 
+
+Q3. The three measures of central tendency for the given height data are as follows: Mean = 177.56, Median = 177.5 and Mode = 178⁶.
+
+Q4. The standard deviation for the given data is 1.98⁹.
+
+Q5. Measures of dispersion such as range, variance and standard deviation are used to describe the spread of a dataset. For example, if we have two datasets with the same mean but different variances, then we can say that one dataset is more spread out than the other¹².
+
+Q6. A Venn diagram is a diagram that shows all possible logical relations between a finite collection of different sets¹³.
+
+Q7. (i) A B = {2,6} (ii) A ⋃ B = {0,2,3,4,5,6,7,8,10}¹³.
+
+Q8. Skewness in data refers to the degree of asymmetry in a distribution.
+
+Q9. If a data is right skewed then the position of median with respect to mean will be less than the mean.
+
+Q10. Covariance measures how two variables move together while correlation measures how strong their relationship is. Covariance can take any value between negative infinity and positive infinity while correlation can take values between -1 and 1.
+
+Q11. The formula for calculating sample mean is: Mean = (Sum of all values in dataset) / (Number of values in dataset). For example, if we have a dataset {2, 4, 6}, then Mean = (2+4+6)/3 = 4.
+
+Q12. For a normal distribution data, mean = median = mode.
+
+Q13. Covariance measures how two variables move together while correlation measures how strong their relationship is. Covariance can take any value between negative infinity and positive infinity while correlation can take values between -1 and 1.
+
+Q14. Outliers affect measures of central tendency and dispersion by shifting them away from their true values. For example, if we have a dataset {1,2,3,4}, then Mean = (1+2+3+4)/4 = 2.5 but if we add an outlier like 1000 to this dataset then Mean = (1+2+3+4+1000)/5 = 202 which is not representative of the true values in this dataset¹².
+
