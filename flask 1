@@ -1,0 +1,23 @@
+Q1. **GET** and **POST** are two HTTP request methods used to retrieve or send data to a server. The **GET** method requests a representation of the specified resource. Requests using GET should only retrieve data. The **POST** method submits an entity to the specified resource, often causing a change in state or side effects on the server¹³⁴⁵.
+
+Q2. **request** is used in Flask to access the incoming data from the request, which includes the mimetype, referrer, IP address, raw data, HTTP method, and headers, among other things⁶⁷.
+
+Q3. **redirect()** is used in Flask to redirect the user to another target location with specified status code⁹ [^10^] ¹¹¹³¹⁴.
+
+Q4. **Templates** are files that contain static data as well as placeholders for dynamic data. In Flask, templates are used to render dynamic HTML pages. The **render_template()** function is used to render templates⁶.
+
+Q5. Here's an example of a simple API:
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    app.run()
+```
+
